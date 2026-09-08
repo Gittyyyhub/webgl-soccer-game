@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Soccer Game - EA Sports FC Style</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui-container">
+        <div id="score-board">
+            <div class="team home">
+                <div class="team-name">HOME</div>
+                <div class="score" id="home-score">0</div>
+            </div>
+            <div class="time-display" id="time-display">0:00</div>
+            <div class="team away">
+                <div class="team-name">AWAY</div>
+                <div class="score" id="away-score">0</div>
+            </div>
+        </div>
+        <div id="hud-info">
+            <div id="possession" class="stat">Possession: <span id="possession-value">50%</span></div>
+            <div id="selected-player" class="stat">Selected: <span id="player-name">-</span></div>
+        </div>
+        <div id="pause-menu" class="menu hidden">
+            <h2>PAUSED</h2>
+            <button id="resume-btn">Resume</button>
+            <button id="settings-btn">Settings</button>
+            <button id="quit-btn">Quit to Menu</button>
+        </div>
+    </div>
+
+    <script src="js/libs/gl-matrix.min.js"></script>
+    <script src="js/core/math.js"></script>
+    <script src="js/core/physics.js"></script>
+    <script src="js/graphics/shader.js"></script>
+    <script src="js/graphics/renderer.js"></script>
+    <script src="js/graphics/camera.js"></script>
+    <script src="js/entities/ball.js"></script>
+    <script src="js/entities/player.js"></script>
+    <script src="js/entities/team.js"></script>
+    <script src="js/game/match.js"></script>
+    <script src="js/game/ai.js"></script>
+    <script src="js/input/controller.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

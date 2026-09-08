@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #0a0e27;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#ui-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#score-board {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    pointer-events: all;
+}
+
+.team {
+    text-align: center;
+}
+
+.team-name {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 5px;
+}
+
+.score {
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.team.home .score {
+    color: #ff6b6b;
+}
+
+.team.away .score {
+    color: #4ecdc4;
+}
+
+#time-display {
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+    color: #ffd700;
+}
+
+#hud-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+    pointer-events: all;
+}
+
+.stat {
+    margin-bottom: 8px;
+}
+
+.stat span {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+#pause-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #ffd700;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    pointer-events: all;
+    z-index: 1000;
+}
+
+#pause-menu.hidden {
+    display: none;
+}
+
+#pause-menu h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #ffd700;
+}
+
+#pause-menu button {
+    display: block;
+    width: 200px;
+    padding: 12px;
+    margin: 10px auto;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#pause-menu button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+#pause-menu button:active {
+    transform: scale(0.95);
+}
